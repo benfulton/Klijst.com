@@ -1,0 +1,19 @@
+<div class="page">
+
+        <div id="header">
+            <div id="logo">
+                <h1>Klijst</h1>
+                <h2>Social listmaking</h2>
+            </div>
+<h2>Available Lijsts</h2>
+<p>Check out these lijsts - check them off if you've done them!</p>
+<ul>
+  <% @lijsts.each do |lijst| %>
+    <li><%= link_to lijst.name, lijst %></li>
+  <% end %>
+</ul>
+
+<%= link_to "New Lijst", new_lijst_path %>
+</div>
+</div>
+
