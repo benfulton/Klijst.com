@@ -1,4 +1,5 @@
 class TingsController < ApplicationController
+  before_filter :authenticate_user!, :except => [:show]
   before_filter :find_lijst
   before_filter :find_ting, :only => [:show, :edit, :update, :destroy]
 
