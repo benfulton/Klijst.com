@@ -1,0 +1,17 @@
+<h2><%= @userlijst.lijst.name %></h2>
+
+<%= link_to "Add tings", new_lijst_ting_path(@userlijst.lijst) %>
+
+<%= form_tag(:method => "put") do %>
+  <ul id='tings'>
+  <% @userlijst.lijst.tings.each do |ting| %>
+  <li>
+     <%= check_box_tag("selected_tings[]", ting.id, @userlijst.tings.include?(ting)) %>
+    #<%= ting.id %> - <%= link_to ting.name, [@userlijst.lijst, ting] %>
+  </li>
+  <% end %>
+</ul>
+
+<%= submit_tag(value = "Accept", options = {}) %>
+<% end %>
+
