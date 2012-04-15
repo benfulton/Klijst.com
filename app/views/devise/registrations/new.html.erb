@@ -1,0 +1,33 @@
+<div id="wrapper">
+	<div id="wrapper2">
+		<%= render 'shared/header' %>
+		<div id="page">
+			<div id="content">
+				<div class="post">
+ <h2 class="title"><a href="#">Sign up</a></h2>
+
+<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
+
+  <div><%= f.label :email %><br />
+  <%= f.email_field :email %></div>
+
+  <div><%= f.label :password %><br />
+  <%= f.password_field :password %></div>
+
+  <div><%= f.label :password_confirmation %><br />
+  <%= f.password_field :password_confirmation %></div>
+
+  <div><%= f.submit "Sign up" %></div>
+<% end %>
+
+<%= render :partial => "devise/shared/links" %>
+		</div>
+	  </div>
+	</div>
+      <%= render 'shared/sidebar' %> 
+		<div id="footer">
+			<p>Copyright (c) 2012 Klijst.com. All rights reserved. Design by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.</p>
+		</div>
+  </div>
+</div>
