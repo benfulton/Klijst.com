@@ -11,7 +11,19 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111219025241) do
+ActiveRecord::Schema.define(:version => 20120418141531) do
+
+  create_table "authorizations", :force => true do |t|
+    t.string   "uid"
+    t.string   "provider"
+    t.string   "token"
+    t.string   "secret"
+    t.string   "name"
+    t.string   "link"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "lijsts", :force => true do |t|
     t.string   "name"
@@ -28,6 +40,18 @@ ActiveRecord::Schema.define(:version => 20111219025241) do
   end
 
   add_index "tings", ["lijst_id"], :name => "index_tings_on_lijst_id"
+
+  create_table "tings_userlijsts", :id => false, :force => true do |t|
+    t.integer "ting_id"
+    t.integer "userlijst_id"
+  end
+
+  create_table "userlijsts", :force => true do |t|
+    t.integer  "lijst_id"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", :force => true do |t|
     t.string   "email",                                 :default => "", :null => false

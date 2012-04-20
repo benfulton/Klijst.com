@@ -1,9 +1,3 @@
-<div id="wrapper">
-	<div id="wrapper2">
-		<%= render 'shared/header' %>
-		<div id="page">
-			<div id="content">
-				<div class="post">
 <h2 class="title"><a href="#">Sign in</a></h2>
 
 <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
@@ -21,14 +15,3 @@
 <% end %>
 
 <%= render :partial => "devise/shared/links" %>
-</div>
-</div>
-			<%= render 'shared/sidebar' %>
-			<div style="clear: both;">&nbsp;</div>
-		</div>
-		<!-- end #page -->
-		<div id="footer">
-			<p>Copyright (c) 2012 Klijst.com. All rights reserved. Design by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.</p>
-</div>
-</div>
-</div>
