@@ -1,22 +1,30 @@
-<div class="page">
-
-<nav>
- <%= link_to "Sign up", new_user_registration_path %>
-</nav>
-        <div id="header">
-            <div id="logo">
-                <h1>Klijst</h1>
-                <h2>Social listmaking</h2>
-            </div>
-<h2>Available Lijsts</h2>
-<p>Check out these lijsts - check them off if you've done them!</p>
-<ul>
-  <% @lijsts.each do |lijst| %>
-    <li><%= link_to lijst.name, lijst %></li>
-  <% end %>
-</ul>
-
-<%= link_to "New Lijst", new_lijst_path %>
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<div id="wrapper">
+	<div id="wrapper2">
+		<%= render 'shared/header' %>
+		<div id="page">
+			<div id="content">
+				<div class="post">
+					<h2 class="title"><a href="#">Welcome to Klijst </a></h2>
+					<p class="meta"><span class="date">April 8, 2012</span><span class="posted" style="display:none">Posted by <a href="#">Someone</a></span></p>
+					<div style="clear: both;">&nbsp;</div>
+					<div class="entry">
+						<p>Klijst is a site for making lists. Lists are freely editable by any user, like a wiki, but you check off the list items as you do them. The items you have checked are stored for you alone.</p>
+						<p class="links" style="display:none"><a href="#" class="more">Read More</a><a href="#" title="b0x" class="comments">Comments</a></p>
+					</div>
+				</div>
+				<div style="clear: both;">&nbsp;</div>
+			</div>
+			<!-- end #content -->
+			<%= render 'sidebar' %>
+			<div style="clear: both;">&nbsp;</div>
+		</div>
+		<!-- end #page -->
+		<div id="footer">
+			<p>Copyright (c) 2012 Klijst.com. All rights reserved. Design by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.</p>
+		</div>
+	</div>
 </div>
-</div>
-
+<!-- end #footer -->
+</body>
+</html>

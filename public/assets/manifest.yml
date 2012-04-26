@@ -1,7 +1,9 @@
 ---
-img01.gif: img01-ee64ae1b759ffa9180139ef604982517.gif
+img01.jpg: img01-6c9e5b894d1d2f02e3078fd4e2e09d2d.jpg
+img02.jpg: img02-78005490de30db642c4b49bb8588d220.jpg
+img03.jpg: img03-5fefb7d54de67e1914da3af06185b14d.jpg
 rails.png: rails-bd9ad5a560b5a3a7be0808c5cd76a798.png
 jquery-ui.min.js: jquery-ui-7e33882a28fc84ad0e0e47e46cbf901c.min.js
 jquery.min.js: jquery-8a50feed8d29566738ad005e19fe1c2d.min.js
-application.js: application-3e9b8a534af6e2a89cfd4b6b9767368b.js
-application.css: application-5f62980b592e9aea12a902f279e8a3e0.css
+application.js: application-122c1bf7b3c9fee5c3d78afc24cf18ac.js
+application.css: application-90418d6ecc1a506b49cff5ae44f1b133.css

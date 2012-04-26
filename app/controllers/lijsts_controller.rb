@@ -19,11 +19,13 @@ class LijstsController < ApplicationController
   def show
     @lijst = Lijst.find(params[:id])
     if user_signed_in?
-      render :action => 'show_checkable'
+	@uls = Userlijst.find(:first, :conditions => ["lijst_id = ? and user_id = ?", @lijst.id, current_user.id])
+	if @uls.nil?
+  	  @uls = Userlijst.create(:lijst => @lijst, :user => current_user )
+        @uls.save!
+      end 
+      redirect_to :controller => 'userlijsts', :action => 'show', :id => @uls.id
     end
   end
 
-  def show_checkable
-    @lijst = Lijst.find(params[:id])
-  end
 end
