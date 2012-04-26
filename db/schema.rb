@@ -13,6 +13,18 @@
 
 ActiveRecord::Schema.define(:version => 20111223041015) do
 
+  create_table "authorizations", :force => true do |t|
+    t.string   "uid"
+    t.string   "provider"
+    t.string   "token"
+    t.string   "secret"
+    t.string   "name"
+    t.string   "link"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "lijsts", :force => true do |t|
     t.string   "name"
     t.datetime "created_at"

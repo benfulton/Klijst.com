@@ -37,4 +37,5 @@ group :test do
   gem 'database_cleaner'
 end
 
-gem 'devise', '~> 1.4.3'
+gem 'devise', ">= 2.1.0.rc"
+gem 'omniauth-facebook'
