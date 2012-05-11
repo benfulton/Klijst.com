@@ -1,38 +1,50 @@
-			<div id="sidebar">
-				<ul>
-					<li>
-						<div id="search" >
-							<form method="get" action="#">
-								<div>
-									<input type="text" name="s" id="search-text" value="" />
-									<input type="submit" id="search-submit" value="GO" />
-								</div>
-							</form>
-						</div>
-						<div style="clear: both;">&nbsp;</div>
-					</li>
-					<li>
-						<h2>Social Listmaking</h2>
-						<p>Check out these lijsts - check them off if you've done them!
-						</p>
-					</li>
-					<li>
-						<h2>Available Lijsts</h2>
-						<ul>
-						</ul>
-					</li>
-					<li>
-						<h2>Create Lijsts</h2>
-						<ul>
-							<li><%= link_to "New Lijst", new_lijst_path %></li>
-						</ul>
-					</li>
-					<li>
-						<h2>Archives</h2>
-						<ul>
-							<li><a href="#">Aliquam libero</a></li>
-						</ul>
-					</li>
-				</ul>
+<div id="sidebar">
+	<ul>
+		<li>
+			<div id="search" >
+				<form method="get" action="#">
+					<div>
+						<input type="text" name="s" id="search-text" value="" />
+						<input type="submit" id="search-submit" value="GO" />
+					</div>
+				</form>
 			</div>
-			<!-- end #sidebar -->
+			<div style="clear: both;">
+				&nbsp;
+			</div>
+		</li>
+		<li>
+			<h2>Social Listmaking</h2>
+			<p>
+				Check out these lijsts - check them off if you've done them!
+			</p>
+		</li>
+		<li>
+			<h2>Available Lijsts</h2>
+			<ul>
+				<% @lijsts.each do |lijst| %>
+				<li>
+					<%= link_to lijst.name, lijst %>
+				</li>
+				<% end %>
+			</ul>
+		</li>
+		<li>
+			<h2>Create Lijsts</h2>
+			<ul>
+				<li>
+					<%= link_to "New Lijst", new_lijst_path %>
+				</li>
+			</ul>
+		</li>
+		<li>
+			<h2>Archives</h2>
+			<ul>
+				<li>
+					<a href="#">Aliquam libero</a>
+				</li>
+			</ul>
+		</li>
+	</ul>
+</div>
+<!-- end #sidebar -->
