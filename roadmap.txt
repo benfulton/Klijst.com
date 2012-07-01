@@ -1,0 +1,24 @@
+Existing features
+View list of lists
+View individual lists
+Create list leads to sign-in
+Then you can create the list
+Viewing lists when signed in allows checkboxes
+
+
+Needed features
+View login information on each page
+Display lists in alpha order, discard number
+Add About and Contact pages
+Create iPad client
+Create Android client
+Support private lists
+Support shared lists
+Add commenting on lists
+Create Cucumber tests
+Available lists showing in the sidebar
+
+
+Bugs
+Custom list title in wrong font
+Do something with Archives link
