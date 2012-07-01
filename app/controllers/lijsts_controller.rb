@@ -1,16 +1,10 @@
 class LijstsController < ApplicationController
   before_filter :authenticate_user!, :except => [:index, :show]
   
-  # every page has a sidebar which shows available lijsts
-  before_filter :load_sidebar
-
   def index
-  end
-  
-  def load_sidebar
     @lijsts = Lijst.all
   end
-
+  
   def new
     @lijst = Lijst.new
   end

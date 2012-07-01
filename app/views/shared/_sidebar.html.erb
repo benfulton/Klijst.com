@@ -20,13 +20,11 @@
 			</p>
 		</li>
 		<li>
-			<h2>Available Lijsts</h2>
+			<h2>Available Lijsts (<%= @lijsts.count %>)</h2>
 			<ul>
-				<% @lijsts.each do |lijst| %>
-				<li>
-					<%= link_to lijst.name, lijst %>
-				</li>
-				<% end %>
+			     <% @lijsts.each do |lijst| %>
+			     <li><%= link_to lijst.name, lijst %></li>
+			     <% end %>
 			</ul>
 		</li>
 		<li>
